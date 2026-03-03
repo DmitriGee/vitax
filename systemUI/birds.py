@@ -34,22 +34,24 @@ class BirdsActivity(Activity):
 
     def loop(self, vitax: Vitax) -> None:
         if len(self.seeds) + len(self.fallingSeeds) < 10:
-            if random.randint(0,120):
+            if random.randint(0,30) == 30:
                 point = random_point_in_circle(240,400,200)
                 self.fallingSeeds.append([int(point[0]),int(point[1]*0.5),0.0])
         for i, seed in enumerate(self.fallingSeeds):
-            interpolate.interpolate(seed[2], interpolate.Method.BOUNCE, interpolate.Direction.OUT)
             seed[2] += 0.05
             if seed[2] >= 1.0:
                 self.seeds.append([seed[0],seed[1]])
                 self.fallingSeeds.pop(i)
-                print("Move Seed",self.fallingSeeds,self.seeds)
+                print(i,"Move Seed",self.fallingSeeds,self.seeds)
 
 
     def draw(self, display: Display):
         display.renderer.draw_color = (255,255,255,255)
         for seed in self.seeds:
             display.renderer.fill_rect(Rect(seed[0]-2,seed[1]-2,4,4))
+        for seed in self.fallingSeeds:
+            yBounce = 15 - (interpolate.interpolate(seed[2], interpolate.Method.BOUNCE, interpolate.Direction.OUT) * 15)
+            display.renderer.fill_rect(Rect(seed[0]-2,seed[1]-2-yBounce,4,4))
         
 
     
