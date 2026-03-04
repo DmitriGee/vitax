@@ -29,10 +29,9 @@ class Display:
     def drawActivity(self, activity: Activity):
         deltaTime = self.clock.tick(60)
 
-        activity.draw(self)
+        activity.draw(self, deltaTime)
 
         text = video.Texture.from_surface(self.renderer, self.sysFont.render(f"{self.clock.get_fps():.0f}", 1, (255,255,255,255), (0,0,0,127)))
         self.renderer.blit(text, text.get_rect())
-
 
         self.renderer.present()

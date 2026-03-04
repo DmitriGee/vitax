@@ -1,0 +1,31 @@
+{ "frames": {
+   "Crow-Fly1": {
+    "frame": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 }
+   },
+   "Crow-Fly2": {
+    "frame": { "x": 16, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 16, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 }
+   },
+   "Crow-Stand": {
+    "frame": { "x": 32, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 32, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 }
+   },
+   "Crow-Peck": {
+    "frame": { "x": 48, "y": 0, "w": 16, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 48, "y": 0, "w": 16, "h": 16 },
+    "sourceSize": { "w": 16, "h": 16 }
+   }
+ }
+}

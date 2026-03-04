@@ -12,7 +12,7 @@ class Activity:
         pass
     def init(self, vitax: Vitax) -> None:
         pass
-    def draw(self, display: Display) -> None:
+    def draw(self, display: Display, deltaTime: float) -> None:
         pass
     def event(self, event: pygame.event.Event) -> None:
         pass

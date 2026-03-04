@@ -9,8 +9,10 @@ class Vitax:
     activityStorage: dict = {}
     activity: Activity | None = None
     display: Display
+
     def __init__(self) -> None:
         self.display = Display(self)
+
     def loop(self) -> None:
         if self.activity:
             self.activity.loop(self)
@@ -23,7 +25,6 @@ class Vitax:
                     self.activity.event(event)
             if self.activity.shouldExit:
                 self.setActivity(HomeActivity()) # FIXME: Find an alternative default activity 
-            
 
     def setActivity(self, activity: Activity) -> None:
         if self.activity:

@@ -1,3 +1,5 @@
+from typing import TypeVar
+
 class Animation[T]:
     duration: int
     loop: bool
@@ -10,6 +12,7 @@ class Animation[T]:
     def tick(self, frame: int) -> T:
         raise NotImplementedError()
 
+T = TypeVar("T")
 class AnimationPlayer[T]:
     animation: Animation[T]
     frame: int = 0
